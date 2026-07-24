@@ -12,40 +12,44 @@ onMounted(() => {
 
   gsap.registerPlugin(ScrollTrigger)
 
-  // Hero load sequence
-  gsap
-    .timeline({ defaults: { ease: 'power3.out' } })
-    .from('.site-header', { y: -16, opacity: 0, duration: 0.5 })
-    .from('.hero-line', { y: 34, opacity: 0, duration: 0.7, stagger: 0.12 }, '-=0.2')
-    .from('.console', { y: 40, opacity: 0, duration: 0.8 }, '-=0.55')
+  // Defer entry animations until the tab is actually visible, so a visitor
+  // opening the page in a background tab still sees the intro play in full.
+  whenVisible(() => {
+    // Hero load sequence
+    gsap
+      .timeline({ defaults: { ease: 'power3.out' } })
+      .from('.site-header', { y: -16, opacity: 0, duration: 0.5 })
+      .from('.hero-line', { y: 34, opacity: 0, duration: 0.7, stagger: 0.12 }, '-=0.2')
+      .from('.console', { y: 40, opacity: 0, duration: 0.8 }, '-=0.55')
 
-  // Scroll reveals
-  gsap.utils.toArray<HTMLElement>('.reveal').forEach((el) => {
-    gsap.fromTo(
-      el,
-      { opacity: 0, y: 28 },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 0.7,
+    // Scroll reveals
+    gsap.utils.toArray<HTMLElement>('.reveal').forEach((el) => {
+      gsap.fromTo(
+        el,
+        { opacity: 0, y: 28 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.7,
+          ease: 'power2.out',
+          scrollTrigger: { trigger: el, start: 'top 88%' },
+        },
+      )
+    })
+
+    // Stat counters
+    gsap.utils.toArray<HTMLElement>('[data-count]').forEach((el) => {
+      const target = parseInt(el.getAttribute('data-count') || '0', 10)
+      const obj = { val: 0 }
+      gsap.to(obj, {
+        val: target,
+        duration: 1.6,
         ease: 'power2.out',
-        scrollTrigger: { trigger: el, start: 'top 88%' },
-      },
-    )
-  })
-
-  // Stat counters
-  gsap.utils.toArray<HTMLElement>('[data-count]').forEach((el) => {
-    const target = parseInt(el.getAttribute('data-count') || '0', 10)
-    const obj = { val: 0 }
-    gsap.to(obj, {
-      val: target,
-      duration: 1.6,
-      ease: 'power2.out',
-      scrollTrigger: { trigger: el, start: 'top 90%' },
-      onUpdate: () => {
-        el.textContent = String(Math.round(obj.val))
-      },
+        scrollTrigger: { trigger: el, start: 'top 90%' },
+        onUpdate: () => {
+          el.textContent = String(Math.round(obj.val))
+        },
+      })
     })
   })
 })

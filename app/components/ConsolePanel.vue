@@ -39,47 +39,51 @@ onMounted(() => {
 
   if (reduceMotion) return
 
-  ticker = setInterval(() => pushLogLine(true), 2600)
-
   gsap.registerPlugin(MotionPathPlugin)
 
-  // Draw the wires, then pop the nodes in
-  gsap
-    .timeline({ delay: 0.9 })
-    .from('.wire', {
-      strokeDasharray: (_i: number, el: SVGPathElement) => {
-        const l = el.getTotalLength()
-        return `${l} ${l}`
-      },
-      strokeDashoffset: (_i: number, el: SVGPathElement) => el.getTotalLength(),
-      duration: 0.9,
-      stagger: 0.1,
-      ease: 'power2.inOut',
-    })
-    .from(
-      '.node',
-      { opacity: 0, scale: 0.92, transformOrigin: 'center', duration: 0.4, stagger: 0.08 },
-      '-=0.8',
-    )
+  // Defer console animations until the tab is visible so the wire-draw and
+  // packet loops don't crawl through their timelines in a background tab.
+  whenVisible(() => {
+    ticker = setInterval(() => pushLogLine(true), 2600)
 
-  // Data packets flowing through the integration diagram
-  const ROUTES = [
-    { packet: '#pk-1', path: '#p-ui-api', dur: 1.4, delay: 0.0 },
-    { packet: '#pk-2', path: '#p-api-ns', dur: 1.6, delay: 0.9 },
-    { packet: '#pk-3', path: '#p-api-sql', dur: 1.5, delay: 1.7 },
-    { packet: '#pk-4', path: '#p-api-wh', dur: 1.6, delay: 2.4 },
-  ]
-
-  ROUTES.forEach((r) => {
+    // Draw the wires, then pop the nodes in
     gsap
-      .timeline({ repeat: -1, delay: 1.8 + r.delay, repeatDelay: 1.2 })
-      .set(r.packet, { opacity: 1 })
-      .to(r.packet, {
-        motionPath: { path: r.path, align: r.path, alignOrigin: [0.5, 0.5] },
-        duration: r.dur,
-        ease: 'power1.inOut',
+      .timeline({ delay: 0.9 })
+      .from('.wire', {
+        strokeDasharray: (_i: number, el: SVGPathElement) => {
+          const l = el.getTotalLength()
+          return `${l} ${l}`
+        },
+        strokeDashoffset: (_i: number, el: SVGPathElement) => el.getTotalLength(),
+        duration: 0.9,
+        stagger: 0.1,
+        ease: 'power2.inOut',
       })
-      .to(r.packet, { opacity: 0, duration: 0.2 }, '-=0.1')
+      .from(
+        '.node',
+        { opacity: 0, scale: 0.92, transformOrigin: 'center', duration: 0.4, stagger: 0.08 },
+        '-=0.8',
+      )
+
+    // Data packets flowing through the integration diagram
+    const ROUTES = [
+      { packet: '#pk-1', path: '#p-ui-api', dur: 1.4, delay: 0.0 },
+      { packet: '#pk-2', path: '#p-api-ns', dur: 1.6, delay: 0.9 },
+      { packet: '#pk-3', path: '#p-api-sql', dur: 1.5, delay: 1.7 },
+      { packet: '#pk-4', path: '#p-api-wh', dur: 1.6, delay: 2.4 },
+    ]
+
+    ROUTES.forEach((r) => {
+      gsap
+        .timeline({ repeat: -1, delay: 1.8 + r.delay, repeatDelay: 1.2 })
+        .set(r.packet, { opacity: 1 })
+        .to(r.packet, {
+          motionPath: { path: r.path, align: r.path, alignOrigin: [0.5, 0.5] },
+          duration: r.dur,
+          ease: 'power1.inOut',
+        })
+        .to(r.packet, { opacity: 0, duration: 0.2 }, '-=0.1')
+    })
   })
 })
 
