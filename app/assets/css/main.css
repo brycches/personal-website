@@ -717,7 +717,11 @@ a { color: inherit; }
 
 .forklift-track {
   position: relative;
-  margin: 10px 0 52px;
+  /* padding reserves headroom for the forklift inside the clip box; the
+     negative margin gives it back so page spacing is unchanged */
+  overflow: hidden;
+  padding-top: 50px;
+  margin: -40px 0 52px;
 }
 
 .forklift-track .conveyor-divider { margin: 0; }
