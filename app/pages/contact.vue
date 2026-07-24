@@ -37,7 +37,7 @@ usePageFx()
           </div>
           <div class="contact-row">
             <dt>best for</dt>
-            <dd>Full-stack product work, ERP/NetSuite integrations, manufacturing systems</dd>
+            <dd>Full-stack product work, enterprise resource planning (ERP) / NetSuite integrations, manufacturing systems</dd>
           </div>
           <div class="contact-row">
             <dt>company</dt>

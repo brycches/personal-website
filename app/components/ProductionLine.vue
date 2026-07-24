@@ -176,7 +176,7 @@ onUnmounted(() => {
         class="mes-diagram"
         viewBox="0 0 1240 470"
         role="img"
-        aria-label="A generic factory line — infeed hopper, press, drive gearbox, and robot arm over a conveyor — with sensor data streaming up into an ERP and analytics panel"
+        aria-label="A generic factory line — infeed hopper, press, drive gearbox, and robot arm over a conveyor — with sensor data streaming up into an enterprise resource planning (ERP) and analytics panel"
       >
         <!-- floor -->
         <line class="floor" x1="40" y1="392" x2="1200" y2="392" />
@@ -327,7 +327,7 @@ onUnmounted(() => {
     </div>
 
     <div class="console-log mes-caption" aria-hidden="true">
-      <div><span class="arrow">→</span> machine cycle detected · matching ERP transaction posted <span class="ok">automatically</span></div>
+      <div><span class="arrow">→</span> machine cycle detected · matching enterprise resource planning (ERP) transaction posted <span class="ok">automatically</span></div>
       <div><span class="arrow">→</span> production, inventory, and costing record themselves · <span class="ok">no manual entry</span></div>
     </div>
   </div>

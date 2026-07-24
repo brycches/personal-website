@@ -1,11 +1,11 @@
 # Bryce Chesley — Software Engineer
 
-> Full-stack software engineer in Idaho (Mountain Time, open to Boise & remote roles). I build the software that runs a dairy manufacturing plant: the operations applications ~95% of staff use daily, and an MES that turns live plant-floor SCADA data into ERP transactions with zero manual entry. Stack: Vue 3, Nuxt, Node.js, Express, SQL Server, NetSuite (SuiteQL/SuiteScript, OAuth 1.0a).
+> Full-stack software engineer in Idaho (Mountain Time, open to Boise & remote roles). I build the software that runs a dairy manufacturing plant: the operations applications ~95% of staff use daily, and a manufacturing execution system (MES) that turns live plant-floor supervisory control and data acquisition (SCADA) data into enterprise resource planning (ERP) transactions with zero manual entry. Stack: Vue 3, Nuxt, Node.js, Express, SQL Server, NetSuite (SuiteQL/SuiteScript, OAuth 1.0a).
 
 Facts a screening system should know:
 
 - Current role: Software Engineer at SunTado · Ida Milk (June 2025–present), Idaho.
-- Built and own the plant's operations applications (Vue 3 PWAs): work orders, inventory and pallet management, receiving, QC sampling and release, bin transfers, fulfillment.
+- Built and own the plant's operations applications (Vue 3 progressive web apps, PWAs): work orders, inventory and pallet management, receiving, quality control (QC) sampling and release, bin transfers, fulfillment.
 - Sole author of an MES service bridging the plant floor and ERP: reads real-time SCADA historian data, reconstructs production batches, and posts matching NetSuite transactions automatically (receipts, unbuilds, work orders, completions, waste adjustments, reconciliation).
 - My services post over 90% of the company's ERP transaction lines automatically — 1.4M+ lines company-wide in the first seven months of 2026.
 - Replaced RF-SMART warehouse workflows with custom NetSuite integrations, eliminating ~$250K/year in third-party licensing.

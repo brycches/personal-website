@@ -7,7 +7,7 @@ useHead({
     {
       name: 'description',
       content:
-        'Full-stack software engineer in Idaho. I build the operations platform and MES that run a dairy plant — Vue 3, Node.js, SQL Server, NetSuite.',
+        'Full-stack software engineer in Idaho. I build the operations platform and manufacturing execution system (MES) that run a dairy plant — Vue 3, Node.js, SQL Server, NetSuite.',
     },
   ],
 })
@@ -32,7 +32,8 @@ usePageFx(() => {
         </h1>
         <p class="hero-lede hero-line">
           I built the software that runs a dairy plant — from the apps in operators'
-          hands to the MES that turns live plant-floor data into ERP truth. Vue 3,
+          hands to the manufacturing execution system (MES) that turns live
+          plant-floor data into enterprise resource planning (ERP) truth. Vue 3,
           Node.js, SQL Server, and NetSuite, in production every day.
         </p>
         <div class="hero-actions hero-line">
@@ -73,7 +74,8 @@ usePageFx(() => {
           <span class="feature-tag">plant floor → erp</span>
           <h3>An MES with zero data entry</h3>
           <p>
-            Reads live SCADA process data, reconstructs every batch on the line, and
+            Reads live supervisory control and data acquisition (SCADA) process
+            data, reconstructs every batch on the line, and
             posts inventory and costing to NetSuite automatically. Millions of pounds
             of milk a week, fully lot-traceable.
           </p>
@@ -83,7 +85,8 @@ usePageFx(() => {
           <span class="feature-tag">the platform</span>
           <h3>One app runs the operation</h3>
           <p>
-            A Vue 3 PWA for work orders, inventory and pallets, receiving, QC, and
+            A Vue 3 progressive web app (PWA) for work orders, inventory and
+            pallets, receiving, quality control (QC), and
             fulfillment — used daily by ~95% of staff. I wrote 80%+ of the frontend
             and own it end to end.
           </p>

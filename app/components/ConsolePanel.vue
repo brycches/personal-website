@@ -9,7 +9,7 @@ const LOG_LINES = [
   '<span class="arrow">→</span> backflush job complete · 84 tx today <span class="ok">ok</span>',
   '<span class="arrow">→</span> GET /lot-traceability?lot=A2210 <span class="ok">200</span>',
   '<span class="arrow">→</span> bin transfer B-14 → C-02 <span class="ok">ok</span>',
-  '<span class="arrow">→</span> QC release · batch 0847 <span class="ok">approved</span>',
+  '<span class="arrow">→</span> quality control (QC) release · batch 0847 <span class="ok">approved</span>',
   '<span class="arrow">→</span> inventory adjustment posted <span class="ok">ok</span>',
   '<span class="arrow">→</span> fulfillment #10382 dispatched <span class="ok">ok</span>',
 ]

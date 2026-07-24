@@ -4,7 +4,7 @@ useHead({
   meta: [
     {
       name: 'description',
-      content: 'Public GitHub repositories by Bryce Chesley, pulled live from the GitHub API.',
+      content: 'Public GitHub repositories by Bryce Chesley, pulled live from the GitHub application programming interface (API).',
     },
   ],
 })

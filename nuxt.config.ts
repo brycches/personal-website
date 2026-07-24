@@ -22,7 +22,7 @@ export default defineNuxtConfig({
         {
           property: 'og:description',
           content:
-            'I build the software that runs a dairy plant — operations apps used by 95% of staff and an MES posting 1.4M+ ERP transaction lines a year with zero manual entry.',
+            'I build the software that runs a dairy plant — operations apps used by 95% of staff and a manufacturing execution system (MES) posting 1.4M+ enterprise resource planning (ERP) transaction lines a year with zero manual entry.',
         },
         { property: 'og:url', content: 'https://brycechesley.com/' },
         { name: 'twitter:card', content: 'summary' },
@@ -62,12 +62,12 @@ export default defineNuxtConfig({
               'SuiteQL',
               'OAuth 1.0a',
               'Manufacturing Execution Systems (MES)',
-              'SCADA / historian integration',
-              'EDI',
-              'ERP integration',
+              'Supervisory control and data acquisition (SCADA) / historian integration',
+              'Electronic data interchange (EDI)',
+              'Enterprise resource planning (ERP) integration',
             ],
             description:
-              'Full-stack software engineer building the operations platform and MES for a dairy manufacturing plant: applications used daily by ~95% of staff, and automation that posts over 90% of the company’s ERP transaction lines (1.4M+ lines in the first seven months of 2026) with zero manual entry.',
+              'Full-stack software engineer building the operations platform and manufacturing execution system (MES) for a dairy manufacturing plant: applications used daily by ~95% of staff, and automation that posts over 90% of the company’s enterprise resource planning (ERP) transaction lines (1.4M+ lines in the first seven months of 2026) with zero manual entry.',
           }),
         },
       ],

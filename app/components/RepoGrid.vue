@@ -92,7 +92,7 @@ onBeforeUnmount(() => {
       Fetching repositories…
     </p>
     <p v-else-if="failed" class="repo-error">
-      Couldn’t reach the GitHub API — browse my work directly at
+      Couldn’t reach the GitHub application programming interface (API) — browse my work directly at
       <a href="https://github.com/brycches" target="_blank" rel="noopener">github.com/brycches</a>.
     </p>
     <template v-else>

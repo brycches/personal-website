@@ -16,10 +16,11 @@ const loaded = ref(false)
 
     <div v-if="!loaded" class="demo-cover">
       <span class="feature-tag">fobech · live demo</span>
-      <h3>Walk through a working MES</h3>
+      <h3>Walk through a working manufacturing execution system (MES)</h3>
       <p>
         An interactive manufacturing demo from my company, Fobech — work orders, lot
-        traceability, QC, and a live Andon board running on synthetic data. Click
+        traceability, quality control (QC), and a live Andon board running on
+        synthetic data. Click
         anything; it's built to be poked.
       </p>
       <div class="demo-actions">
@@ -32,7 +33,7 @@ const loaded = ref(false)
       <iframe
         class="demo-frame"
         src="https://demo.fobech.com/?embed=1"
-        title="Fobech MES live demo"
+        title="Fobech manufacturing execution system (MES) live demo"
         loading="lazy"
       ></iframe>
       <div class="console-log demo-foot" aria-hidden="true">

@@ -5,7 +5,7 @@ useHead({
     {
       name: 'description',
       content:
-        'What I build: platforms that run operations, plant-floor data wired into the ERP, third-party tools replaced in-house, and architecture a business can grow on.',
+        'What I build: platforms that run operations, plant-floor data wired into the enterprise resource planning (ERP) system, third-party tools replaced in-house, and architecture a business can grow on.',
     },
   ],
 })
@@ -26,7 +26,7 @@ const impacts = [
     stat: '0',
     statLabel: 'manual entries',
     title: 'Machines that report their own work',
-    body: 'I wired live machine data straight into the ERP, so production, inventory movement, and costing record themselves as they physically happen — millions of pounds of product a week, every lot traceable end to end, no operator typing anything in. Over 90% of all transaction lines in the ERP are now posted by my systems.',
+    body: 'I wired live machine data straight into the enterprise resource planning (ERP) system, so production, inventory movement, and costing record themselves as they physically happen — millions of pounds of product a week, every lot traceable end to end, no operator typing anything in. Over 90% of all transaction lines in the ERP are now posted by my systems.',
     stack: ['Node.js', 'SCADA data', 'ERP integration'],
   },
   {
@@ -98,7 +98,7 @@ const impacts = [
         <NuxtLink to="/projects">projects page</NuxtLink>. And when the work day ends,
         I build manufacturing software under my own flag at
         <a href="https://fobech.com" target="_blank" rel="noopener">Fobech</a> — you can
-        even <a href="https://demo.fobech.com" target="_blank" rel="noopener">walk through a live MES demo</a>.
+        even <a href="https://demo.fobech.com" target="_blank" rel="noopener">walk through a live manufacturing execution system (MES) demo</a>.
       </p>
     </section>
   </main>
