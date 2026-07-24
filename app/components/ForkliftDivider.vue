@@ -40,7 +40,7 @@ onUnmounted(() => {
 
 <template>
   <div ref="track" class="forklift-track" aria-hidden="true">
-    <svg v-if="show" ref="lift" class="forklift" viewBox="0 0 56 72" width="46" height="59">
+    <svg v-if="show" ref="lift" class="forklift" viewBox="0 0 74 72" width="61" height="59">
       <!-- counterweight + body -->
       <rect class="fk-solid" x="2" y="38" width="6" height="14" rx="2" />
       <rect class="fk-solid" x="6" y="34" width="30" height="22" rx="3" />
@@ -49,12 +49,14 @@ onUnmounted(() => {
       <circle class="fk-beacon" cx="21" cy="13" r="2.5" />
       <!-- chassis link joining body to mast -->
       <rect class="fk-solid" x="33" y="42" width="9" height="8" rx="1" />
-      <!-- mast + fork + load -->
+      <!-- mast + forks -->
       <line class="fk-line" x1="40" y1="6" x2="40" y2="66" />
       <line class="fk-line" x1="43" y1="6" x2="43" y2="66" />
-      <line class="fk-line" x1="43" y1="64" x2="55" y2="64" />
-      <rect class="fk-box" x="44" y="52" width="11" height="12" rx="2" />
-      <line class="fk-line" x1="44" y1="56" x2="55" y2="56" />
+      <line class="fk-line" x1="43" y1="64" x2="72" y2="64" />
+      <!-- pallet deck + load -->
+      <rect class="fk-box" x="45" y="58" width="26" height="4" rx="1" />
+      <rect class="fk-box" x="48" y="44" width="20" height="14" rx="2" />
+      <line class="fk-line" x1="48" y1="49" x2="68" y2="49" />
       <!-- wheels (same size) -->
       <circle class="fk-solid" cx="13" cy="64" r="6" />
       <circle class="fk-solid" cx="31" cy="64" r="6" />
