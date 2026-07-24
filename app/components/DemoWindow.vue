@@ -31,7 +31,7 @@ const loaded = ref(false)
     <template v-else>
       <iframe
         class="demo-frame"
-        src="https://demo.fobech.com"
+        src="https://demo.fobech.com/?embed=1"
         title="Fobech MES live demo"
         loading="lazy"
       ></iframe>
