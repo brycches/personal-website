@@ -27,6 +27,7 @@ usePageFx()
         <a class="btn btn-solid" href="mailto:brycches@gmail.com">brycches@gmail.com</a>
         <a class="btn btn-ghost" href="https://www.linkedin.com/in/bryce-chesley-43546915b" target="_blank" rel="noopener">LinkedIn</a>
         <a class="btn btn-ghost" href="https://github.com/brycches" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn btn-ghost" href="https://fobech.com" target="_blank" rel="noopener">Fobech LLC</a>
       </div>
       <div class="contact-flex">
         <dl class="contact-rows reveal">
@@ -37,6 +38,10 @@ usePageFx()
           <div class="contact-row">
             <dt>best for</dt>
             <dd>Full-stack product work, ERP/NetSuite integrations, manufacturing systems</dd>
+          </div>
+          <div class="contact-row">
+            <dt>company</dt>
+            <dd>Fobech LLC — manufacturing software · <a href="https://fobech.com" target="_blank" rel="noopener">fobech.com</a></dd>
           </div>
           <div class="contact-row">
             <dt>response</dt>

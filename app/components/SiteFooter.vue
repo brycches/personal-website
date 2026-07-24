@@ -9,6 +9,6 @@
       <NuxtLink to="/about">About</NuxtLink>
       <NuxtLink to="/contact">Contact</NuxtLink>
     </nav>
-    <span class="footer-mono">built with Nuxt + GSAP · hosted on GitHub Pages</span>
+    <span class="footer-mono">built with Nuxt + GSAP · <a href="https://fobech.com" target="_blank" rel="noopener">fobech.com</a></span>
   </footer>
 </template>

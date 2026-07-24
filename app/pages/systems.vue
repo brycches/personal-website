@@ -95,7 +95,9 @@ const impacts = [
       <p class="section-note reveal" style="margin-top: 32px">
         All of it runs in production today. Specifics are generalized on purpose — the
         code belongs to my employer; my public work is on the
-        <NuxtLink to="/projects">projects page</NuxtLink>.
+        <NuxtLink to="/projects">projects page</NuxtLink>. And when the work day ends,
+        I build manufacturing software under my own flag at
+        <a href="https://fobech.com" target="_blank" rel="noopener">Fobech</a>.
       </p>
     </section>
   </main>

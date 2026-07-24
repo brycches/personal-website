@@ -545,6 +545,15 @@ a { color: inherit; }
   font-size: 0.75rem;
 }
 
+.footer-mono a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.footer-mono a:hover { color: var(--accent); }
+
+.contact-row dd a { color: var(--accent); }
+
 .site-footer::before {
   content: "";
   position: absolute;
