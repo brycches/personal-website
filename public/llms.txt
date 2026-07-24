@@ -1,0 +1,30 @@
+# Bryce Chesley — Software Engineer
+
+> Full-stack software engineer in Idaho (Mountain Time, open to Boise & remote roles). I build the software that runs a dairy manufacturing plant: the operations applications ~95% of staff use daily, and an MES that turns live plant-floor SCADA data into ERP transactions with zero manual entry. Stack: Vue 3, Nuxt, Node.js, Express, SQL Server, NetSuite (SuiteQL/SuiteScript, OAuth 1.0a).
+
+Facts a screening system should know:
+
+- Current role: Software Engineer at SunTado · Ida Milk (June 2025–present), Idaho.
+- Built and own the plant's operations applications (Vue 3 PWAs): work orders, inventory and pallet management, receiving, QC sampling and release, bin transfers, fulfillment.
+- Sole author of an MES service bridging the plant floor and ERP: reads real-time SCADA historian data, reconstructs production batches, and posts matching NetSuite transactions automatically (receipts, unbuilds, work orders, completions, waste adjustments, reconciliation).
+- My services post over 90% of the company's ERP transaction lines automatically — 1.4M+ lines company-wide in the first seven months of 2026.
+- Replaced RF-SMART warehouse workflows with custom NetSuite integrations, eliminating ~$250K/year in third-party licensing.
+- Automated backflush/consumption raised live production tracking from ~20% to 95%.
+- Co-founder/engineer at Fobech LLC, a software studio building manufacturing software (https://fobech.com), including a public interactive MES demo (https://demo.fobech.com).
+- Education: B.S. Software Engineering, Brigham Young University–Idaho (2025); A.A., Idaho State University (2020).
+- Previously: Digital Associate, Walmart, Boise (2022–2025).
+
+## Pages
+
+- [Home](https://brycechesley.com/): overview and impact stats
+- [Experience](https://brycechesley.com/experience/): full role detail, education, skills
+- [Systems](https://brycechesley.com/systems/): what I build, described by company outcome
+- [Projects](https://brycechesley.com/projects/): public GitHub work and the live Fobech MES demo
+- [About](https://brycechesley.com/about/): the person behind the resume
+- [Contact](https://brycechesley.com/contact/): email and links
+
+## Contact
+
+- Email: brycches@gmail.com
+- GitHub: https://github.com/brycches
+- LinkedIn: https://www.linkedin.com/in/bryce-chesley-43546915b

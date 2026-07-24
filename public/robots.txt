@@ -1,0 +1,9 @@
+# brycechesley.com — personal portfolio of Bryce Chesley, Software Engineer.
+# All crawlers, including AI / LLM agents, are welcome on every page.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://brycechesley.com/sitemap.xml
+
+# Machine-readable summary for LLMs: https://brycechesley.com/llms.txt
