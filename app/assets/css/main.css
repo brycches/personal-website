@@ -529,8 +529,9 @@ a { color: inherit; }
 /* ---------- footer ---------- */
 
 .site-footer {
+  position: relative;
   border-top: 1px solid var(--line);
-  padding: 26px 24px;
+  padding: 30px 24px 26px;
   display: flex;
   justify-content: space-between;
   gap: 12px;
@@ -542,6 +543,20 @@ a { color: inherit; }
 .footer-mono {
   font-family: "IBM Plex Mono", monospace;
   font-size: 0.75rem;
+}
+
+.site-footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: repeating-linear-gradient(
+    -45deg,
+    rgba(16, 24, 32, 0.12) 0 10px,
+    transparent 10px 20px
+  );
 }
 
 /* ---------- reduced motion ---------- */
@@ -577,6 +592,9 @@ a { color: inherit; }
   html { scroll-behavior: auto; }
   .pulse { animation: none; }
   .conveyor-divider { animation: none; }
+  .endpoint::after { animation: none; }
+  .gear-spin { animation: none; }
+  .pipe-divider { animation: none; }
 }
 
 /* ===================================================================
@@ -726,9 +744,9 @@ a { color: inherit; }
 .vessel path,
 .vessel polyline,
 .vessel line {
-  fill: #16232C;
-  stroke: #3A4C58;
-  stroke-width: 1.5;
+  fill: #1B2A34;
+  stroke: #64808F;
+  stroke-width: 1.8;
 }
 
 .vessel line, .vessel polyline, .vessel path[fill="none"] { fill: none; }
@@ -791,6 +809,116 @@ a { color: inherit; }
   font-family: "IBM Plex Mono", monospace;
   font-size: 12px;
   fill: var(--accent);
+}
+
+.floor {
+  stroke: #374A55;
+  stroke-width: 2;
+}
+
+.box rect {
+  fill: #24363F;
+  stroke: #7A96A4;
+  stroke-width: 1.6;
+}
+
+.box line {
+  stroke: #7A96A4;
+  stroke-width: 1;
+}
+
+.gear circle, .gear line {
+  fill: none;
+  stroke: #8FA9B6;
+  stroke-width: 1.7;
+}
+
+.gear .hub {
+  fill: #0E171E;
+  stroke: #6E8291;
+}
+
+.lamp { fill: var(--ok); stroke: none; }
+
+.ping {
+  fill: none;
+  stroke: var(--ok);
+  stroke-width: 1.5;
+}
+
+.data-line {
+  fill: none;
+  stroke: var(--console-line);
+  stroke-width: 1.5;
+  stroke-dasharray: 5 6;
+}
+
+.data-fill {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 2.5;
+  stroke-linecap: round;
+}
+
+.data-dot { fill: var(--accent); }
+.feed-drop { fill: #E9E4D8; stroke: none; }
+
+.v-panel .bar {
+  fill: var(--accent);
+  stroke: none;
+}
+
+/* ---------- impact rows ---------- */
+
+.impact-rows {
+  border-top: 1px solid var(--line);
+}
+
+.impact-row {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 36px;
+  padding: 38px 0;
+  border-bottom: 1px solid var(--line);
+  align-items: start;
+}
+
+.impact-num {
+  display: block;
+  font-family: "Archivo", sans-serif;
+  font-weight: 800;
+  font-size: 2.9rem;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  color: var(--accent);
+}
+
+.impact-num-label {
+  display: block;
+  margin-top: 8px;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+}
+
+.impact-body h3 {
+  font-family: "Archivo", sans-serif;
+  font-weight: 700;
+  font-size: 1.35rem;
+  letter-spacing: -0.01em;
+  margin: 8px 0 10px;
+}
+
+.impact-body p {
+  color: #333d45;
+  font-size: 0.97rem;
+  max-width: 64ch;
+  margin-bottom: 16px;
+}
+
+@media (max-width: 700px) {
+  .impact-row { grid-template-columns: 1fr; gap: 14px; }
 }
 
 .system-grid {
@@ -904,12 +1032,170 @@ a { color: inherit; }
   text-align: right;
 }
 
+/* ---------- silo scroll progress ---------- */
+
+.silo-progress {
+  position: fixed;
+  right: 26px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 40;
+  opacity: 0.95;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.silo-hidden { opacity: 0; }
+
+.silo-line {
+  fill: none;
+  stroke: var(--muted);
+  stroke-width: 1.6;
+}
+
+.silo-body { fill: rgba(255, 255, 255, 0.55); }
+
+.silo-liquid { fill: var(--accent); opacity: 0.85; }
+
+.silo-wave { fill: var(--accent-dark); opacity: 0.9; }
+
+.silo-pct {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 11px;
+  fill: var(--muted);
+}
+
+@media (max-width: 1180px) {
+  .silo-progress { display: none; }
+}
+
+/* ---------- endpoint terminal cursor ---------- */
+
+.endpoint::after {
+  content: "▊";
+  margin-left: 14px;
+  color: var(--accent);
+  font-size: 0.65em;
+  vertical-align: baseline;
+  animation: blink 1.1s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+/* ---------- repo loading gear ---------- */
+
+.gear-spin {
+  vertical-align: -2px;
+  margin-right: 8px;
+  animation: gearspin 1.6s linear infinite;
+}
+
+@keyframes gearspin {
+  to { transform: rotate(360deg); }
+}
+
+/* ---------- gauges ---------- */
+
+.contact-flex {
+  display: flex;
+  gap: 64px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-top: 44px;
+}
+
+.gauge-cluster {
+  display: flex;
+  gap: 30px;
+  padding-top: 10px;
+}
+
+.gauge-dial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.gauge-arc, .gauge-tick {
+  fill: none;
+  stroke: var(--muted);
+  stroke-width: 2;
+}
+
+.gauge-red {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 3;
+}
+
+.gauge-needle {
+  stroke: var(--ink);
+  stroke-width: 2.5;
+  stroke-linecap: round;
+}
+
+.gauge-hub { fill: var(--ink); }
+
+.gauge-value {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 11px;
+  fill: var(--accent);
+}
+
+.gauge-label {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+}
+
+/* ---------- pipe divider ---------- */
+
+.pipe-wrap {
+  max-width: var(--maxw);
+  margin: 56px auto -40px;
+  padding: 0 24px;
+}
+
+.pipe-divider {
+  position: relative;
+  height: 14px;
+  background-image:
+    repeating-linear-gradient(90deg, rgba(232, 93, 31, 0.5) 0 18px, transparent 18px 36px),
+    linear-gradient(var(--line), var(--line));
+  background-size: 36px 3px, 100% 3px;
+  background-position: 0 center, 0 center;
+  background-repeat: repeat-x, no-repeat;
+  animation: pipeflow 1.3s linear infinite;
+}
+
+.pipe-divider::before,
+.pipe-divider::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 5px;
+  height: 14px;
+  border-radius: 2px;
+  background: var(--muted);
+}
+
+.pipe-divider::before { left: 0; }
+.pipe-divider::after { right: 0; }
+
+@keyframes pipeflow {
+  to { background-position: 36px center, 0 center; }
+}
+
 /* ---------- contact page ---------- */
 
 .contact-rows {
-  margin-top: 44px;
   border-top: 1px solid var(--line);
   max-width: 640px;
+  flex: 1 1 380px;
 }
 
 .contact-row {

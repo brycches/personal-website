@@ -2,12 +2,12 @@
 import { gsap } from 'gsap'
 
 useHead({
-  title: 'Bryce Chesley — Software Development Engineer',
+  title: 'Bryce Chesley — Software Engineer',
   meta: [
     {
       name: 'description',
       content:
-        'Full-stack software development engineer in Burley, Idaho. I build the operations platform and MES that run a dairy plant — Vue 3, Node.js, SQL Server, NetSuite.',
+        'Full-stack software engineer in Idaho. I build the operations platform and MES that run a dairy plant — Vue 3, Node.js, SQL Server, NetSuite.',
     },
   ],
 })
@@ -25,13 +25,13 @@ usePageFx(() => {
     <!-- ============ HERO ============ -->
     <section class="hero">
       <div class="hero-copy">
-        <p class="eyebrow hero-line">SOFTWARE DEVELOPMENT ENGINEER · SUNTADO / IDA MILK</p>
+        <p class="eyebrow hero-line">SOFTWARE ENGINEER · SUNTADO / IDA MILK</p>
         <h1 class="hero-name">
           <span class="hero-line">Bryce</span>
           <span class="hero-line">Chesley</span>
         </h1>
         <p class="hero-lede hero-line">
-          I build the software that runs a dairy plant — from the apps in operators'
+          I built the software that runs a dairy plant — from the apps in operators'
           hands to the MES that turns live plant-floor data into ERP truth. Vue 3,
           Node.js, SQL Server, and NetSuite, in production every day.
         </p>
@@ -48,20 +48,20 @@ usePageFx(() => {
     <!-- ============ STATS ============ -->
     <section class="stats" aria-label="Impact at a glance">
       <div class="stat reveal">
-        <span class="stat-num"><span data-count="85">85</span>%</span>
-        <span class="stat-label">of active staff use SunApps daily</span>
+        <span class="stat-num"><span data-count="95">95</span>%</span>
+        <span class="stat-label">of active staff use my applications daily</span>
       </div>
       <div class="stat reveal">
-        <span class="stat-num">$<span data-count="50">50</span>K</span>
+        <span class="stat-num">$<span data-count="250">250</span>K</span>
         <span class="stat-label">annual third-party spend replaced</span>
       </div>
       <div class="stat reveal">
-        <span class="stat-num"><span data-count="4">4</span></span>
-        <span class="stat-label">services refactored from one monolith</span>
+        <span class="stat-num"><span data-count="0">0</span></span>
+        <span class="stat-label">manual entries for plant-floor ERP postings</span>
       </div>
       <div class="stat reveal">
-        <span class="stat-num">~<span data-count="100">100</span></span>
-        <span class="stat-label">NetSuite transactions supported per day</span>
+        <span class="stat-num"><span data-count="1282224" data-format="compact">1.3M</span>+</span>
+        <span class="stat-label">ERP transaction lines my systems posted this year</span>
       </div>
     </section>
 
@@ -81,21 +81,21 @@ usePageFx(() => {
         </NuxtLink>
         <NuxtLink to="/systems" class="feature-card reveal">
           <span class="feature-tag">the platform</span>
-          <h3>SunApps runs the operation</h3>
+          <h3>One app runs the operation</h3>
           <p>
             A Vue 3 PWA for work orders, inventory and pallets, receiving, QC, and
-            fulfillment — used daily by ~85% of staff. I wrote 80%+ of the frontend
-            and split its API into four services.
+            fulfillment — used daily by ~95% of staff. I wrote 80%+ of the frontend
+            and own it end to end.
           </p>
           <span class="feature-more">see the systems →</span>
         </NuxtLink>
         <NuxtLink to="/experience" class="feature-card reveal">
           <span class="feature-tag">the path</span>
-          <h3>From tutoring code to owning it</h3>
+          <h3>Owner of the stack, end to end</h3>
           <p>
-            BYU–Idaho software engineering grad, former programming TA, now the
-            primary developer and subject-matter expert behind a plant's daily
-            operations software.
+            BYU–Idaho software engineering grad, now the primary developer and
+            subject-matter expert behind a plant's daily operations software — the
+            person they call when it matters.
           </p>
           <span class="feature-more">full experience →</span>
         </NuxtLink>

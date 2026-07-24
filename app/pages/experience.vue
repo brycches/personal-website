@@ -5,7 +5,7 @@ useHead({
     {
       name: 'description',
       content:
-        'Software development experience: SunTado / Ida Milk operations platform, MES and NetSuite integrations, BYU–Idaho programming TA, and more.',
+        'Software engineering experience: SunTado / Ida Milk operations platform, MES and NetSuite integrations, and the education behind them.',
     },
   ],
 })
@@ -24,8 +24,8 @@ usePageFx()
       <article class="entry reveal">
         <div class="entry-head">
           <div>
-            <h3>Junior Developer / NetSuite Integration Developer</h3>
-            <p class="entry-org">SunTado · Ida Milk — Burley, Idaho</p>
+            <h3>Software Engineer</h3>
+            <p class="entry-org">SunTado · Ida Milk — Idaho</p>
           </div>
           <p class="entry-dates">JUN 2025 — PRESENT</p>
         </div>
@@ -35,31 +35,31 @@ usePageFx()
           the person the plant calls when something needs to work.
         </p>
 
-        <h4 class="entry-sub">The platform — SunApps</h4>
+        <h4 class="entry-sub">The platform</h4>
         <ul class="entry-points">
-          <li>Own <strong>SunApps</strong>, the Vue 3 PWA the plant runs on: work orders, inventory and pallet management, purchase-order receiving and milk intake, QC sampling and release, bin transfers, and fulfillment — used daily by ~85% of active staff across warehouse, QA, packaging, production, and management.</li>
-          <li>Wrote 80%+ of the frontend and refactored its monolithic Node.js/Express API into four independent services, analyzing upstream and downstream dependencies to cut deployment risk.</li>
+          <li>Built and own <strong>the applications the plant runs on</strong> — Vue 3 PWAs for work orders, inventory and pallet management, receiving, QC sampling and release, bin transfers, and fulfillment — used daily by ~95% of active staff across warehouse, QA, packaging, production, and management.</li>
+          <li>Wrote 80%+ of the frontend and evolved the platform's backend into independent services, analyzing upstream and downstream dependencies to cut deployment risk.</li>
         </ul>
 
         <h4 class="entry-sub">Manufacturing execution — MES</h4>
         <ul class="entry-points">
-          <li>Sole author of an <strong>MES service</strong> that bridges the plant floor and the ERP: it reads real-time SCADA process data from AVEVA Historian, reconstructs batches at every stage of the line — intake, separation, blending, UHT, filling — and posts the matching NetSuite transactions automatically: receipts, assembly unbuilds, work order create/issue/complete, waste adjustments, and reconciliation sweeps.</li>
+          <li>Sole author of an <strong>MES service</strong> that bridges the plant floor and the ERP: it reads real-time process data from the plant's SCADA historian, reconstructs production batches at every stage of the line, and posts the matching NetSuite transactions automatically — receipts, assembly unbuilds, work order create/issue/complete, waste adjustments, and reconciliation sweeps.</li>
           <li>Millions of pounds of milk a week now land in NetSuite fully lot-traceable and costed, with <strong>zero operator data entry</strong> — in-plant production that previously wasn't recorded in the ERP at all.</li>
-          <li>Built the automated backflush and consumption system that raised contemporaneous production tracking from ~20% to 80–90%.</li>
+          <li>Built the automated backflush and consumption system that raised contemporaneous production tracking from ~20% to 95% — since it went live, over 90% of all transaction lines in the ERP are created by my systems, not by hand.</li>
         </ul>
 
         <h4 class="entry-sub">Integrations &amp; architecture</h4>
         <ul class="entry-points">
-          <li>Designed, documented, and support RESTful workflows and secure OAuth 1.0a NetSuite integrations for work orders, item receipts, fulfillments, inventory adjustments, QC release, bin transfers, and lot traceability — ~100 NetSuite transactions a day.</li>
-          <li>Replaced major RF-SMART warehouse and inventory workflows with custom NetSuite integrations, eliminating roughly $50K/year in third-party licensing.</li>
-          <li>Co-built the API gateway that fronts every SunApps client — authentication and brokered access to NetSuite and Active Directory.</li>
+          <li>Designed, documented, and support RESTful workflows and secure OAuth 1.0a NetSuite integrations for work orders, item receipts, fulfillments, inventory adjustments, QC release, bin transfers, and lot traceability — my services now post over 90% of the company's ERP transaction lines automatically (1.4M+ lines company-wide in the first seven months of this year).</li>
+          <li>Replaced major RF-SMART warehouse and inventory workflows with custom NetSuite integrations, eliminating roughly $250K/year in third-party licensing.</li>
+          <li>Co-built the API gateway that fronts every client app on the platform — authentication and brokered access to NetSuite and Active Directory.</li>
           <li>Building the company's external web portal: a Vue 3 frontend behind a hardened Express gateway with JWT access/refresh auth and curated DTOs, running on Node 22 with PM2 and Caddy.</li>
         </ul>
 
         <h4 class="entry-sub">Reliability &amp; people</h4>
         <ul class="entry-points">
           <li>End-to-end testing, production troubleshooting, root-cause analysis, and change-impact validation across every application the plant depends on.</li>
-          <li>Primary SunApps support resource and subject-matter expert; partner with warehouse, QA, production, procurement, accounting, and management to turn business needs into shipped software.</li>
+          <li>Primary support resource and subject-matter expert for the platform; partner with warehouse, QA, production, procurement, accounting, and management to turn business needs into shipped software.</li>
         </ul>
       </article>
 
@@ -79,19 +79,7 @@ usePageFx()
         </ul>
       </article>
 
-      <article class="entry reveal">
-        <div class="entry-head">
-          <div>
-            <h3>Teaching Assistant — Programming with Functions</h3>
-            <p class="entry-org">Brigham Young University–Idaho — Rexburg, Idaho</p>
-          </div>
-          <p class="entry-dates">SEP 2022 — DEC 2022</p>
-        </div>
-        <ul class="entry-points">
-          <li>Graded student code and provided one-on-one tutoring for an introductory programming course, giving personalized feedback on nearly one thousand individual submissions.</li>
-          <li>Deepened my grounding in unit testing and the development patterns worth emulating — by teaching them.</li>
-        </ul>
-      </article>
+      <div class="conveyor-divider" aria-hidden="true"></div>
     </section>
 
     <section class="section">

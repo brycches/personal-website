@@ -1,6 +1,6 @@
 # Personal resume site — Bryce Chesley
 
-Personal resume website for Bryce Chesley, Software Development Engineer.
+Personal resume website for Bryce Chesley, Software Engineer.
 
 - **Stack:** [Nuxt 4](https://nuxt.com/) (Vue 3), no backend
 - **Animation:** [GSAP 3](https://gsap.com/) — hero load sequence, MotionPath data packets on the SunApps integration diagram, ScrollTrigger reveals, stat counters

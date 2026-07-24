@@ -35,6 +35,8 @@ export function usePageFx(setup?: () => void) {
 
         gsap.utils.toArray<HTMLElement>('[data-count]').forEach((el) => {
           const target = parseInt(el.getAttribute('data-count') || '0', 10)
+          const compact = el.getAttribute('data-format') === 'compact'
+          const fmt = new Intl.NumberFormat('en', { notation: 'compact', maximumFractionDigits: 1 })
           const obj = { val: 0 }
           gsap.to(obj, {
             val: target,
@@ -42,7 +44,8 @@ export function usePageFx(setup?: () => void) {
             ease: 'power2.out',
             scrollTrigger: { trigger: el, start: 'top 90%' },
             onUpdate: () => {
-              el.textContent = String(Math.round(obj.val))
+              const v = Math.round(obj.val)
+              el.textContent = compact ? fmt.format(v) : String(v)
             },
           })
         })

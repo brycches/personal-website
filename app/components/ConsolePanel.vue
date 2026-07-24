@@ -97,12 +97,12 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <div class="console" aria-label="Animated diagram of the SunApps integration platform">
+  <div class="console" aria-label="Animated diagram of the operations platform">
     <div class="console-bar">
       <span class="console-dot dot-red"></span>
       <span class="console-dot dot-yellow"></span>
       <span class="console-dot dot-green"></span>
-      <span class="console-title">sunapps · production</span>
+      <span class="console-title">ops platform · production</span>
       <span class="console-status"><span class="pulse"></span>LIVE</span>
     </div>
 
@@ -110,7 +110,7 @@ onBeforeUnmount(() => {
       class="diagram"
       viewBox="0 0 640 320"
       role="img"
-      aria-label="Data flows from the SunApps Vue interface through four Node.js services into NetSuite, SQL Server, and warehouse floor workflows"
+      aria-label="Data flows from the Vue operator interface through seven Node.js services into NetSuite, SQL Server, and warehouse floor workflows"
     >
       <path id="p-ui-api" class="wire" d="M150,160 C 210,160 220,160 268,160" />
       <path id="p-api-ns" class="wire" d="M382,120 C 440,90 460,72 500,66" />
@@ -119,12 +119,12 @@ onBeforeUnmount(() => {
 
       <g class="node" id="n-ui">
         <rect x="30" y="120" width="120" height="80" rx="10" />
-        <text x="90" y="152" class="node-title" text-anchor="middle">SunApps UI</text>
+        <text x="90" y="152" class="node-title" text-anchor="middle">Operator UI</text>
         <text x="90" y="176" class="node-sub" text-anchor="middle">Vue 3 · Pinia</text>
       </g>
       <g class="node" id="n-api">
         <rect x="268" y="104" width="114" height="112" rx="10" />
-        <text x="325" y="138" class="node-title" text-anchor="middle">4 services</text>
+        <text x="325" y="138" class="node-title" text-anchor="middle">7 services</text>
         <text x="325" y="162" class="node-sub" text-anchor="middle">Node.js</text>
         <text x="325" y="184" class="node-sub" text-anchor="middle">Express · PM2</text>
       </g>

@@ -40,7 +40,7 @@ onMounted(async () => {
     if (!res.ok) throw new Error(`GitHub API ${res.status}`)
     const data: Repo[] = await res.json()
     repos.value = data
-      .filter((r) => !r.fork)
+      .filter((r) => !r.fork && r.name !== 'brycches')
       .sort((a, b) => new Date(b.pushed_at).getTime() - new Date(a.pushed_at).getTime())
       .slice(0, 6)
   } catch {
@@ -76,7 +76,21 @@ onBeforeUnmount(() => {
 
 <template>
   <div id="repo-grid" class="repo-grid">
-    <p v-if="loading" class="repo-loading">Fetching repositories…</p>
+    <p v-if="loading" class="repo-loading">
+      <svg class="gear-spin" viewBox="0 0 20 20" width="15" height="15" aria-hidden="true">
+        <circle cx="10" cy="10" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5" />
+        <line x1="10" y1="0.5" x2="10" y2="4.5" stroke="currentColor" stroke-width="1.8" />
+        <line x1="10" y1="15.5" x2="10" y2="19.5" stroke="currentColor" stroke-width="1.8" />
+        <line x1="0.5" y1="10" x2="4.5" y2="10" stroke="currentColor" stroke-width="1.8" />
+        <line x1="15.5" y1="10" x2="19.5" y2="10" stroke="currentColor" stroke-width="1.8" />
+        <line x1="3.3" y1="3.3" x2="6.1" y2="6.1" stroke="currentColor" stroke-width="1.8" />
+        <line x1="13.9" y1="13.9" x2="16.7" y2="16.7" stroke="currentColor" stroke-width="1.8" />
+        <line x1="16.7" y1="3.3" x2="13.9" y2="6.1" stroke="currentColor" stroke-width="1.8" />
+        <line x1="6.1" y1="13.9" x2="3.3" y2="16.7" stroke="currentColor" stroke-width="1.8" />
+        <circle cx="10" cy="10" r="2.2" fill="currentColor" />
+      </svg>
+      Fetching repositories…
+    </p>
     <p v-else-if="failed" class="repo-error">
       Couldn’t reach the GitHub API — browse my work directly at
       <a href="https://github.com/brycches" target="_blank" rel="noopener">github.com/brycches</a>.

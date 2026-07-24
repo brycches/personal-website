@@ -2,16 +2,19 @@ export default defineNuxtConfig({
   compatibilityDate: '2026-07-01',
   devtools: { enabled: false },
   css: ['~/assets/css/main.css'],
+  // GitHub Pages' branch-based builder chokes on the extracted
+  // _payload.json files; inline the payloads instead.
+  experimental: { payloadExtraction: false },
   app: {
     head: {
       htmlAttrs: { lang: 'en' },
-      title: 'Bryce Chesley — Software Development Engineer',
+      title: 'Bryce Chesley — Software Engineer',
       meta: [
         { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
         {
           name: 'description',
           content:
-            'Bryce Chesley is a full-stack software development engineer in Burley, Idaho, building production enterprise operations software with Vue 3, Node.js, SQL Server, and NetSuite.',
+            'Bryce Chesley is a full-stack software engineer in Idaho, building production enterprise operations software with Vue 3, Node.js, SQL Server, and NetSuite.',
         },
       ],
       link: [

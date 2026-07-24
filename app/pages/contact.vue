@@ -28,20 +28,26 @@ usePageFx()
         <a class="btn btn-ghost" href="https://www.linkedin.com/in/bryce-chesley-43546915b" target="_blank" rel="noopener">LinkedIn</a>
         <a class="btn btn-ghost" href="https://github.com/brycches" target="_blank" rel="noopener">GitHub</a>
       </div>
-      <dl class="contact-rows reveal">
-        <div class="contact-row">
-          <dt>location</dt>
-          <dd>Burley, Idaho — Mountain Time</dd>
+      <div class="contact-flex">
+        <dl class="contact-rows reveal">
+          <div class="contact-row">
+            <dt>location</dt>
+            <dd>Idaho — Mountain Time · open to Boise &amp; remote</dd>
+          </div>
+          <div class="contact-row">
+            <dt>best for</dt>
+            <dd>Full-stack product work, ERP/NetSuite integrations, manufacturing systems</dd>
+          </div>
+          <div class="contact-row">
+            <dt>response</dt>
+            <dd>Usually within a day</dd>
+          </div>
+        </dl>
+        <div class="gauge-cluster reveal">
+          <GaugeDial :value="92" label="response time" display="&lt;24h" />
+          <GaugeDial :value="99" label="uptime mindset" display="99.9%" />
         </div>
-        <div class="contact-row">
-          <dt>best for</dt>
-          <dd>Full-stack product work, ERP/NetSuite integrations, manufacturing systems</dd>
-        </div>
-        <div class="contact-row">
-          <dt>response</dt>
-          <dd>Usually within a day</dd>
-        </div>
-      </dl>
+      </div>
     </section>
   </main>
 </template>

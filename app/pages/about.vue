@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { gsap } from 'gsap'
+
 useHead({
   title: 'About — Bryce Chesley',
   meta: [
@@ -10,7 +12,22 @@ useHead({
   ],
 })
 
-usePageFx()
+usePageFx(() => {
+  // Draw the ridgeline as it scrolls into view
+  const path = document.querySelector<SVGPathElement>('.ridge path')
+  if (!path) return
+  const l = path.getTotalLength()
+  gsap.fromTo(
+    path,
+    { strokeDasharray: `${l} ${l}`, strokeDashoffset: l },
+    {
+      strokeDashoffset: 0,
+      duration: 2.2,
+      ease: 'power2.out',
+      scrollTrigger: { trigger: '.ridge', start: 'top 88%' },
+    },
+  )
+})
 </script>
 
 <template>
@@ -23,14 +40,13 @@ usePageFx()
     <section class="section">
       <div class="about-grid">
         <article class="about-block reveal">
-          <span class="feature-tag">teaching runs deep</span>
+          <span class="feature-tag">explaining till it clicks</span>
           <p>
-            Before I wrote software for a living I taught it — as a TA for BYU–Idaho's
-            programming course, where I graded and gave personal feedback on nearly a
-            thousand submissions, and before that at my high school's math tutoring
-            center. Explaining something until it clicks for someone else is still how
-            I learn best, and it's why I ended up as the go-to support person for
-            every system I build.
+            I've always ended up teaching along the way — math tutoring in high
+            school, helping classmates through programming courses in college.
+            Explaining something until it clicks for someone else is still how I
+            learn best, and it's why I end up as the go-to support person for every
+            system I build.
           </p>
         </article>
 

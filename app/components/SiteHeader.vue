@@ -2,9 +2,10 @@
   <header class="site-header">
     <NuxtLink class="brand" to="/" aria-label="Bryce Chesley — home">
       <span class="brand-mark">BC</span>
-      <span class="brand-sub">/ burley, idaho</span>
+      <span class="brand-sub">/ idaho</span>
     </NuxtLink>
     <nav class="site-nav" aria-label="Pages">
+      <NuxtLink to="/">Home</NuxtLink>
       <NuxtLink to="/experience">Experience</NuxtLink>
       <NuxtLink to="/systems">Systems</NuxtLink>
       <NuxtLink to="/projects">Projects</NuxtLink>
