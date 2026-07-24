@@ -63,7 +63,7 @@ usePageFx()
         </ul>
       </article>
 
-      <div class="conveyor-divider" aria-hidden="true"></div>
+      <ForkliftDivider />
 
       <article class="entry reveal">
         <div class="entry-head">

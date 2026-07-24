@@ -715,6 +715,41 @@ a { color: inherit; }
   margin: 26px 0 10px;
 }
 
+.forklift-track {
+  position: relative;
+  margin: 10px 0 52px;
+}
+
+.forklift-track .conveyor-divider { margin: 0; }
+
+.forklift {
+  position: absolute;
+  bottom: 4px;
+  left: -90px;
+}
+
+.forklift .fk-line {
+  fill: none;
+  stroke: var(--muted);
+  stroke-width: 2;
+}
+
+.forklift .fk-solid {
+  fill: var(--surface);
+  stroke: var(--muted);
+  stroke-width: 2;
+}
+
+.forklift .fk-hub { fill: var(--muted); }
+
+.forklift .fk-box {
+  fill: var(--surface);
+  stroke: var(--muted);
+  stroke-width: 1.6;
+}
+
+.forklift .fk-beacon { fill: var(--accent); }
+
 .conveyor-divider {
   height: 10px;
   margin: 10px 0 52px;
