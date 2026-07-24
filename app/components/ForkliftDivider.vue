@@ -47,6 +47,8 @@ onUnmounted(() => {
       <!-- overhead guard + beacon -->
       <path class="fk-line" d="M22,20 V8 H46 V20" />
       <circle class="fk-beacon" cx="34" cy="6" r="2.5" />
+      <!-- chassis link joining body to mast -->
+      <rect class="fk-solid" x="49" y="31" width="11" height="8" rx="1" />
       <!-- mast + fork + load -->
       <line class="fk-line" x1="58" y1="4" x2="58" y2="46" />
       <line class="fk-line" x1="61" y1="4" x2="61" y2="46" />

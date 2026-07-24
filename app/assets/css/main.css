@@ -724,7 +724,7 @@ a { color: inherit; }
 
 .forklift {
   position: absolute;
-  bottom: 4px;
+  bottom: 0px;
   left: -90px;
 }
 
