@@ -6,11 +6,15 @@
     "dev": "nuxt dev",
     "build": "nuxt build",
     "generate": "nuxt generate",
-    "preview": "nuxt preview"
+    "preview": "nuxt preview",
+    "deploy": "nuxt generate && gh-pages -d .output/public -t"
   },
   "dependencies": {
     "gsap": "^3.13.0",
     "nuxt": "^4.0.3",
     "vue": "^3.5.18"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   }
 }
