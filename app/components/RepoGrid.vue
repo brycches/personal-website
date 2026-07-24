@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { nextTick, onMounted, ref } from 'vue'
+import { nextTick, onBeforeUnmount, onMounted, ref } from 'vue'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
@@ -53,16 +53,24 @@ onMounted(async () => {
   if (!reduceMotion && repos.value.length) {
     gsap.registerPlugin(ScrollTrigger)
     await nextTick()
-    gsap.from('.repo-card', {
-      opacity: 0,
-      y: 24,
-      duration: 0.5,
-      stagger: 0.07,
-      ease: 'power2.out',
-      scrollTrigger: { trigger: '#repo-grid', start: 'top 85%' },
+    ctx = gsap.context(() => {
+      gsap.from('.repo-card', {
+        opacity: 0,
+        y: 24,
+        duration: 0.5,
+        stagger: 0.07,
+        ease: 'power2.out',
+        scrollTrigger: { trigger: '#repo-grid', start: 'top 85%' },
+      })
     })
     ScrollTrigger.refresh()
   }
+})
+
+let ctx: gsap.Context | undefined
+
+onBeforeUnmount(() => {
+  ctx?.revert()
 })
 </script>
 

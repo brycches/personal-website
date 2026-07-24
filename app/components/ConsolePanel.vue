@@ -17,6 +17,7 @@ const LOG_LINES = [
 const logEl = ref<HTMLElement | null>(null)
 let logIndex = 0
 let ticker: ReturnType<typeof setInterval> | null = null
+let ctx: gsap.Context | undefined
 
 function pushLogLine(animate: boolean) {
   const el = logEl.value
@@ -44,6 +45,7 @@ onMounted(() => {
   // Defer console animations until the tab is visible so the wire-draw and
   // packet loops don't crawl through their timelines in a background tab.
   whenVisible(() => {
+    ctx = gsap.context(() => {
     ticker = setInterval(() => pushLogLine(true), 2600)
 
     // Draw the wires, then pop the nodes in
@@ -84,11 +86,13 @@ onMounted(() => {
         })
         .to(r.packet, { opacity: 0, duration: 0.2 }, '-=0.1')
     })
+    })
   })
 })
 
 onBeforeUnmount(() => {
   if (ticker) clearInterval(ticker)
+  ctx?.revert()
 })
 </script>
 
