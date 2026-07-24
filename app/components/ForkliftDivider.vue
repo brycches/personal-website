@@ -40,26 +40,26 @@ onUnmounted(() => {
 
 <template>
   <div ref="track" class="forklift-track" aria-hidden="true">
-    <svg v-if="show" ref="lift" class="forklift" viewBox="0 0 84 52" width="76" height="47">
+    <svg v-if="show" ref="lift" class="forklift" viewBox="0 0 56 72" width="46" height="59">
       <!-- counterweight + body -->
-      <rect class="fk-solid" x="10" y="24" width="8" height="14" rx="2" />
-      <rect class="fk-solid" x="16" y="20" width="36" height="18" rx="3" />
+      <rect class="fk-solid" x="2" y="38" width="6" height="14" rx="2" />
+      <rect class="fk-solid" x="6" y="34" width="30" height="22" rx="3" />
       <!-- overhead guard + beacon -->
-      <path class="fk-line" d="M22,20 V8 H46 V20" />
-      <circle class="fk-beacon" cx="34" cy="6" r="2.5" />
+      <path class="fk-line" d="M10,34 V16 H32 V34" />
+      <circle class="fk-beacon" cx="21" cy="13" r="2.5" />
       <!-- chassis link joining body to mast -->
-      <rect class="fk-solid" x="49" y="31" width="11" height="8" rx="1" />
+      <rect class="fk-solid" x="33" y="42" width="9" height="8" rx="1" />
       <!-- mast + fork + load -->
-      <line class="fk-line" x1="58" y1="4" x2="58" y2="46" />
-      <line class="fk-line" x1="61" y1="4" x2="61" y2="46" />
-      <line class="fk-line" x1="61" y1="44" x2="82" y2="44" />
-      <rect class="fk-box" x="64" y="28" width="16" height="15" rx="2" />
-      <line class="fk-line" x1="64" y1="33" x2="80" y2="33" />
-      <!-- wheels -->
-      <circle class="fk-solid" cx="26" cy="44" r="7" />
-      <circle class="fk-solid" cx="50" cy="44" r="6" />
-      <circle class="fk-hub" cx="26" cy="44" r="2" />
-      <circle class="fk-hub" cx="50" cy="44" r="2" />
+      <line class="fk-line" x1="40" y1="6" x2="40" y2="66" />
+      <line class="fk-line" x1="43" y1="6" x2="43" y2="66" />
+      <line class="fk-line" x1="43" y1="64" x2="55" y2="64" />
+      <rect class="fk-box" x="44" y="52" width="11" height="12" rx="2" />
+      <line class="fk-line" x1="44" y1="56" x2="55" y2="56" />
+      <!-- wheels (same size) -->
+      <circle class="fk-solid" cx="13" cy="64" r="6" />
+      <circle class="fk-solid" cx="31" cy="64" r="6" />
+      <circle class="fk-hub" cx="13" cy="64" r="2" />
+      <circle class="fk-hub" cx="31" cy="64" r="2" />
     </svg>
     <div class="conveyor-divider"></div>
   </div>
