@@ -97,19 +97,19 @@ onMounted(() => {
       <!-- ============ STATS ============ -->
       <section class="stats" aria-label="Impact at a glance">
         <div class="stat reveal">
-          <span class="stat-num"><span data-count="85">0</span>%</span>
+          <span class="stat-num"><span data-count="85">85</span>%</span>
           <span class="stat-label">of active staff use SunApps daily</span>
         </div>
         <div class="stat reveal">
-          <span class="stat-num">$<span data-count="50">0</span>K</span>
+          <span class="stat-num">$<span data-count="50">50</span>K</span>
           <span class="stat-label">annual third-party spend replaced</span>
         </div>
         <div class="stat reveal">
-          <span class="stat-num"><span data-count="4">0</span></span>
+          <span class="stat-num"><span data-count="4">4</span></span>
           <span class="stat-label">services refactored from one monolith</span>
         </div>
         <div class="stat reveal">
-          <span class="stat-num">~<span data-count="100">0</span></span>
+          <span class="stat-num">~<span data-count="100">100</span></span>
           <span class="stat-label">NetSuite transactions supported per day</span>
         </div>
       </section>
