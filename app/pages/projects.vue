@@ -24,6 +24,21 @@ usePageFx()
       </p>
     </section>
 
+    <section class="section">
+      <div class="feature-grid">
+        <a class="feature-card reveal" href="https://demo.fobech.com" target="_blank" rel="noopener">
+          <span class="feature-tag">fobech · live demo</span>
+          <h3>Walk through a working MES</h3>
+          <p>
+            An interactive manufacturing demo from my company, Fobech — work orders,
+            lot traceability, QC, and a live Andon board running on synthetic data.
+            Click anything; it's built to be poked.
+          </p>
+          <span class="feature-more">open demo.fobech.com →</span>
+        </a>
+      </div>
+    </section>
+
     <section class="section contact">
       <RepoGrid />
     </section>

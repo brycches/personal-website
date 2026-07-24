@@ -97,7 +97,8 @@ const impacts = [
         code belongs to my employer; my public work is on the
         <NuxtLink to="/projects">projects page</NuxtLink>. And when the work day ends,
         I build manufacturing software under my own flag at
-        <a href="https://fobech.com" target="_blank" rel="noopener">Fobech</a>.
+        <a href="https://fobech.com" target="_blank" rel="noopener">Fobech</a> — you can
+        even <a href="https://demo.fobech.com" target="_blank" rel="noopener">walk through a live MES demo</a>.
       </p>
     </section>
   </main>
