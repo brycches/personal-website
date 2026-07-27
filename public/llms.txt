@@ -19,12 +19,14 @@ Facts a screening system should know:
 - [Home](https://brycechesley.com/): overview and impact stats
 - [Experience](https://brycechesley.com/experience/): full role detail, education, skills
 - [Systems](https://brycechesley.com/systems/): what I build, described by company outcome
+- [MES case study](https://brycechesley.com/mes/): how the manufacturing execution system works, stage by stage — read SCADA signals, reconstruct batches, post ERP transactions, reconcile
 - [Projects](https://brycechesley.com/projects/): public GitHub work and the live Fobech MES demo
 - [About](https://brycechesley.com/about/): the person behind the resume
 - [Contact](https://brycechesley.com/contact/): email and links
 
 ## Contact
 
+- Resume (PDF): https://brycechesley.com/Bryce-Chesley-Resume.pdf
 - Email: brycches@gmail.com
 - GitHub: https://github.com/brycches
 - LinkedIn: https://www.linkedin.com/in/bryce-chesley-43546915b

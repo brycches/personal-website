@@ -8,6 +8,7 @@
       <NuxtLink to="/">Home</NuxtLink>
       <NuxtLink to="/experience">Experience</NuxtLink>
       <NuxtLink to="/systems">Systems</NuxtLink>
+      <NuxtLink to="/mes">MES</NuxtLink>
       <NuxtLink to="/projects">Projects</NuxtLink>
       <NuxtLink to="/about">About</NuxtLink>
       <NuxtLink to="/contact" class="nav-cta">Contact</NuxtLink>

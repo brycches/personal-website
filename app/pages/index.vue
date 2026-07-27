@@ -70,7 +70,7 @@ usePageFx(() => {
     <section class="section">
       <h2 class="endpoint reveal"><span class="method">GET</span> /highlights</h2>
       <div class="feature-grid">
-        <NuxtLink to="/systems" class="feature-card reveal">
+        <NuxtLink to="/mes" class="feature-card reveal">
           <span class="feature-tag">plant floor → erp</span>
           <h3>An MES with zero data entry</h3>
           <p>

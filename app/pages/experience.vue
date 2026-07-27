@@ -11,13 +11,31 @@ useHead({
 })
 
 usePageFx()
+
+function printResume() {
+  window.print()
+}
 </script>
 
 <template>
   <main>
+    <div class="print-only print-head">
+      <h1>Bryce Chesley</h1>
+      <p>Software Engineer · Idaho (Mountain Time) · open to Boise &amp; remote</p>
+      <p>brycches@gmail.com · brycechesley.com · github.com/brycches · linkedin.com/in/bryce-chesley-43546915b</p>
+    </div>
+
     <section class="section page-head">
       <h1 class="endpoint reveal"><span class="method">GET</span> /experience</h1>
       <p class="section-note reveal">The short version is on my resume. This is the real scope.</p>
+      <p class="reveal resume-actions">
+        <a class="btn btn-solid" href="/Bryce-Chesley-Resume.pdf" download="Bryce-Chesley-Resume.pdf">
+          Download resume (PDF)
+        </a>
+        <button class="btn btn-ghost print-btn" type="button" @click="printResume">
+          Print this page
+        </button>
+      </p>
     </section>
 
     <section class="section">
@@ -47,6 +65,7 @@ usePageFx()
           <li>Sole author of an <strong>MES service</strong> that bridges the plant floor and the enterprise resource planning (ERP) system: it reads real-time process data from the plant's supervisory control and data acquisition (SCADA) historian, reconstructs production batches at every stage of the line, and posts the matching NetSuite transactions automatically — receipts, assembly unbuilds, work order create/issue/complete, waste adjustments, and reconciliation sweeps.</li>
           <li>Millions of pounds of milk a week now land in NetSuite fully lot-traceable and costed, with <strong>zero operator data entry</strong> — in-plant production that previously wasn't recorded in the ERP at all.</li>
           <li>Built the automated backflush and consumption system that raised contemporaneous production tracking from ~20% to 95% — since it went live, over 90% of all transaction lines in the ERP are created by my systems, not by hand.</li>
+          <li class="no-print">Full architecture write-up: <NuxtLink to="/mes">the MES case study</NuxtLink>.</li>
         </ul>
 
         <h4 class="entry-sub">Integrations &amp; architecture</h4>

@@ -25,7 +25,16 @@ export default defineNuxtConfig({
             'I build the software that runs a dairy plant — operations apps used by 95% of staff and a manufacturing execution system (MES) posting 1.4M+ enterprise resource planning (ERP) transaction lines a year with zero manual entry.',
         },
         { property: 'og:url', content: 'https://brycechesley.com/' },
-        { name: 'twitter:card', content: 'summary' },
+        { property: 'og:image', content: 'https://brycechesley.com/og.png' },
+        { property: 'og:image:width', content: '1200' },
+        { property: 'og:image:height', content: '630' },
+        {
+          property: 'og:image:alt',
+          content:
+            'Bryce Chesley — software engineer in Idaho. 95% daily staff adoption, 1.4M+ ERP lines automated, $250K per year replaced.',
+        },
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:image', content: 'https://brycechesley.com/og.png' },
       ],
       script: [
         {
