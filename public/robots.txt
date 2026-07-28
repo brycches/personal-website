@@ -3,6 +3,8 @@
 
 User-agent: *
 Allow: /
+Disallow: /ops
+Disallow: /api
 
 Sitemap: https://brycechesley.com/sitemap.xml
 

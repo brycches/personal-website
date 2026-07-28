@@ -6,15 +6,16 @@
     "dev": "nuxt dev",
     "build": "nuxt build",
     "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "deploy": "nuxt generate && gh-pages -d .output/public -t"
+    "preview": "nuxt preview"
   },
   "dependencies": {
     "gsap": "^3.13.0",
     "nuxt": "^4.0.3",
+    "rrweb": "2.1.1",
+    "rrweb-player": "^2.1.1",
     "vue": "^3.5.18"
   },
   "devDependencies": {
-    "gh-pages": "^6.3.0"
+    "@cloudflare/workers-types": "^4.20250601.0"
   }
 }

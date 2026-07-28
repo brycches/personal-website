@@ -2,9 +2,26 @@ export default defineNuxtConfig({
   compatibilityDate: '2026-07-01',
   devtools: { enabled: false },
   css: ['~/assets/css/main.css'],
-  // GitHub Pages' branch-based builder chokes on the extracted
-  // _payload.json files; inline the payloads instead.
   experimental: { payloadExtraction: false },
+  runtimeConfig: {
+    // Overridden by NUXT_ADMIN_PASSWORD / NUXT_SESSION_SECRET on Cloudflare.
+    adminPassword: '',
+    sessionSecret: '',
+  },
+  routeRules: {
+    // Public pages stay fully prerendered; /api/* and /ops/* run on the
+    // Pages Functions worker (D1-backed analytics + session replay).
+    '/': { prerender: true },
+    '/experience': { prerender: true },
+    '/systems': { prerender: true },
+    '/projects': { prerender: true },
+    '/mes': { prerender: true },
+    '/about': { prerender: true },
+    '/contact': { prerender: true },
+    // Client-only admin surface, kept out of crawlers.
+    '/ops/**': { ssr: false, headers: { 'X-Robots-Tag': 'noindex, nofollow' } },
+    '/api/**': { headers: { 'X-Robots-Tag': 'noindex' } },
+  },
   app: {
     head: {
       htmlAttrs: { lang: 'en' },
