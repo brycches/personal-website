@@ -79,6 +79,12 @@ export default defineNuxtConfig({
               'Full-stack software engineer building the operations platform and manufacturing execution system (MES) for a dairy manufacturing plant: applications used daily by ~95% of staff, and automation that posts over 90% of the company’s enterprise resource planning (ERP) transaction lines (1.4M+ lines in the first seven months of 2026) with zero manual entry.',
           }),
         },
+        {
+          // Cloudflare Web Analytics (cookie-less)
+          type: 'module',
+          src: 'https://static.cloudflareinsights.com/beacon.min.js',
+          'data-cf-beacon': '{"token": "32353209bfe04620aff1e543084ea168"}',
+        },
       ],
       link: [
         { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
