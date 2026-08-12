@@ -28,6 +28,11 @@ export default defineNuxtConfig({
       title: 'Bryce Chesley — Software Engineer',
       meta: [
         { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
+        // Declaring dark support up front stops Chrome/Samsung "auto dark"
+        // from force-inverting the page (which wrecked the SVG diagrams).
+        { name: 'color-scheme', content: 'light dark' },
+        { name: 'theme-color', media: '(prefers-color-scheme: light)', content: '#EFF1EC' },
+        { name: 'theme-color', media: '(prefers-color-scheme: dark)', content: '#131C24' },
         {
           name: 'description',
           content:
@@ -54,6 +59,11 @@ export default defineNuxtConfig({
         { name: 'twitter:image', content: 'https://brycechesley.com/og.png' },
       ],
       script: [
+        {
+          // Apply the saved theme override before first paint (no flash).
+          innerHTML:
+            "(function(){try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}})()",
+        },
         {
           type: 'application/ld+json',
           // Machine-readable resume layer for search engines and AI

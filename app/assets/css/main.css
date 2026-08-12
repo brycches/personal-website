@@ -5,19 +5,57 @@
    =================================================================== */
 
 :root {
+  color-scheme: light;
   --bg: #EFF1EC;
   --surface: #FFFFFF;
   --ink: #101820;
   --muted: #5B6770;
   --line: #D5DAD2;
+  --body-text: #333d45;
+  --stripe: rgba(16, 24, 32, 0.12);
   --accent: #E85D1F;
-  --accent-dark: #C74C15;
+  --accent-hover: #C74C15;
   --console: #0E171E;
   --console-line: #24333D;
   --console-text: #B9C6CE;
   --ok: #46B06E;
   --maxw: 1080px;
 }
+
+/* Dark theme: same slate + signal-orange identity; the console panels
+   are already dark and keep their exact colors in both schemes.
+   Applies via system preference (unless the footer toggle forced light)
+   or via the toggle forcing dark — the two blocks must stay identical. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: #131C24;
+    --surface: #1A2530;
+    --ink: #E9EDEB;
+    --muted: #9AA7AF;
+    --line: #2A3843;
+    --body-text: #C9D2D7;
+    --stripe: rgba(233, 237, 235, 0.10);
+    --accent-hover: #FF7A3C;
+  }
+
+  /* Console panels sit close to the dark page bg — give them an edge. */
+  :root:not([data-theme="light"]) .console { border: 1px solid var(--console-line); }
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #131C24;
+  --surface: #1A2530;
+  --ink: #E9EDEB;
+  --muted: #9AA7AF;
+  --line: #2A3843;
+  --body-text: #C9D2D7;
+  --stripe: rgba(233, 237, 235, 0.10);
+  --accent-hover: #FF7A3C;
+}
+
+:root[data-theme="dark"] .console { border: 1px solid var(--console-line); }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -166,7 +204,7 @@ a { color: inherit; }
   color: #fff;
 }
 
-.btn-solid:hover { background: var(--accent-dark); }
+.btn-solid:hover { background: var(--accent-hover); }
 
 .btn-ghost {
   border: 1px solid var(--line);
@@ -401,7 +439,7 @@ a { color: inherit; }
 .entry-points li {
   padding-left: 22px;
   position: relative;
-  color: #333d45;
+  color: var(--body-text);
   font-size: 0.98rem;
 }
 
@@ -552,6 +590,24 @@ a { color: inherit; }
 
 .footer-mono a:hover { color: var(--accent); }
 
+.theme-toggle {
+  margin-left: 12px;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.75rem;
+  color: var(--muted);
+  background: none;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 3px 13px;
+  cursor: pointer;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.theme-toggle:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
 .contact-row dd a { color: var(--accent); }
 
 .site-footer::before {
@@ -563,7 +619,7 @@ a { color: inherit; }
   height: 6px;
   background: repeating-linear-gradient(
     -45deg,
-    rgba(16, 24, 32, 0.12) 0 10px,
+    var(--stripe) 0 10px,
     transparent 10px 20px
   );
 }
@@ -717,7 +773,7 @@ a { color: inherit; }
 
 .entry-intro {
   max-width: 68ch;
-  color: #333d45;
+  color: var(--body-text);
   margin-bottom: 20px;
 }
 
@@ -975,7 +1031,7 @@ a { color: inherit; }
 }
 
 .impact-body p {
-  color: #333d45;
+  color: var(--body-text);
   font-size: 0.97rem;
   max-width: 64ch;
   margin-bottom: 16px;
@@ -1064,7 +1120,7 @@ a { color: inherit; }
 }
 
 .about-block p {
-  color: #333d45;
+  color: var(--body-text);
   font-size: 0.96rem;
 }
 
@@ -1302,7 +1358,7 @@ a { color: inherit; }
 .contact-row dd {
   margin: 0;
   font-size: 0.95rem;
-  color: #333d45;
+  color: var(--body-text);
 }
 
 /* ---------- printable resume (experience page) ---------- */
@@ -1325,6 +1381,19 @@ a { color: inherit; }
 
 @media print {
   @page { margin: 14mm; }
+
+  /* Paper is always light, even when the browser prefers dark or the
+     toggle forced dark (hence the attribute selector for specificity). */
+  :root,
+  :root[data-theme="dark"] {
+    color-scheme: light;
+    --bg: #fff;
+    --surface: #fff;
+    --ink: #000;
+    --muted: #555;
+    --line: #ddd;
+    --body-text: #000;
+  }
 
   .site-header,
   .site-footer,
@@ -1468,6 +1537,6 @@ a { color: inherit; }
 }
 
 .case-prose p {
-  color: #333d45;
+  color: var(--body-text);
   font-size: 0.98rem;
 }
