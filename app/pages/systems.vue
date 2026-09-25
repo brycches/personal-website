@@ -94,12 +94,12 @@ const impacts = [
       </div>
       <p class="section-note reveal" style="margin-top: 32px">
         All of it runs in production today. Specifics are generalized on purpose — the
-        code belongs to my employer; my public work is on the
+        code belongs to my former employer; my public work is on the
         <NuxtLink to="/projects">projects page</NuxtLink>. For the deep dive on how
         machine data becomes ERP truth, read
-        <NuxtLink to="/mes">the MES case study</NuxtLink>. And when the work day ends,
-        I build manufacturing software under my own flag at
-        <a href="https://fobech.com" target="_blank" rel="noopener">Fobech</a> — you can
+        <NuxtLink to="/mes">the MES case study</NuxtLink>. On the side, I co-own
+        <a href="https://fobech.com" target="_blank" rel="noopener">Fobech</a>, a small
+        manufacturing-software venture with two colleagues — you can
         even <a href="https://demo.fobech.com" target="_blank" rel="noopener">walk through a live manufacturing execution system (MES) demo</a>.
       </p>
     </section>

@@ -20,7 +20,7 @@ usePageFx()
       <p class="section-note reveal">
         How the manufacturing execution system (MES) I built turns live plant-floor
         data into enterprise resource planning (ERP) truth — stage by stage.
-        Generalized on purpose: the code belongs to my employer, but the
+        Generalized on purpose: the code belongs to my former employer, but the
         architecture and the thinking are mine to share.
       </p>
     </section>

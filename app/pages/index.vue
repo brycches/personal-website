@@ -7,7 +7,7 @@ useHead({
     {
       name: 'description',
       content:
-        'Full-stack software engineer in Idaho. I build the operations platform and manufacturing execution system (MES) that run a dairy plant — Vue 3, Node.js, SQL Server, NetSuite.',
+        'Full-stack software engineer in Idaho. I built the operations platform and manufacturing execution system (MES) that run a dairy plant — Vue 3, Node.js, SQL Server, NetSuite.',
     },
   ],
 })
@@ -25,7 +25,7 @@ usePageFx(() => {
     <!-- ============ HERO ============ -->
     <section class="hero">
       <div class="hero-copy">
-        <p class="eyebrow hero-line">SOFTWARE ENGINEER · SUNTADO / IDA MILK</p>
+        <p class="eyebrow hero-line">SOFTWARE ENGINEER · IDAHO · OPEN TO BOISE &amp; REMOTE</p>
         <h1 class="hero-name">
           <span class="hero-line">Bryce</span>
           <span class="hero-line">Chesley</span>
@@ -34,7 +34,7 @@ usePageFx(() => {
           I built the software that runs a dairy plant — from the apps in operators'
           hands to the manufacturing execution system (MES) that turns live
           plant-floor data into enterprise resource planning (ERP) truth. Vue 3,
-          Node.js, SQL Server, and NetSuite, in production every day.
+          Node.js, SQL Server, and NetSuite, running in production.
         </p>
         <div class="hero-actions hero-line">
           <a class="btn btn-solid" href="mailto:brycches@gmail.com">Email me</a>
@@ -50,7 +50,7 @@ usePageFx(() => {
     <section class="stats" aria-label="Impact at a glance">
       <div class="stat reveal">
         <span class="stat-num"><span data-count="95">95</span>%</span>
-        <span class="stat-label">of active staff use my applications daily</span>
+        <span class="stat-label">of active staff used my applications daily</span>
       </div>
       <div class="stat reveal">
         <span class="stat-num">$<span data-count="250">250</span>K</span>
@@ -61,8 +61,8 @@ usePageFx(() => {
         <span class="stat-label">manual entries for plant-floor ERP postings</span>
       </div>
       <div class="stat reveal">
-        <span class="stat-num"><span data-count="1282224" data-format="compact">1.3M</span>+</span>
-        <span class="stat-label">ERP transaction lines my systems posted this year</span>
+        <span class="stat-num"><span data-count="1400000" data-format="compact">1.4M</span>+</span>
+        <span class="stat-label">ERP transaction lines my systems posted in the first seven months of 2026</span>
       </div>
     </section>
 
@@ -88,7 +88,7 @@ usePageFx(() => {
             A Vue 3 progressive web app (PWA) for work orders, inventory and
             pallets, receiving, quality control (QC), and
             fulfillment — used daily by ~95% of staff. I wrote 80%+ of the frontend
-            and own it end to end.
+            and owned it end to end.
           </p>
           <span class="feature-more">see the systems →</span>
         </NuxtLink>
@@ -96,9 +96,9 @@ usePageFx(() => {
           <span class="feature-tag">the path</span>
           <h3>Owner of the stack, end to end</h3>
           <p>
-            BYU–Idaho software engineering grad, now the primary developer and
+            BYU–Idaho software engineering grad who became the primary developer and
             subject-matter expert behind a plant's daily operations software — the
-            person they call when it matters.
+            person they called when it mattered.
           </p>
           <span class="feature-more">full experience →</span>
         </NuxtLink>

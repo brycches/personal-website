@@ -44,7 +44,7 @@ export default defineNuxtConfig({
         {
           property: 'og:description',
           content:
-            'I build the software that runs a dairy plant — operations apps used by 95% of staff and a manufacturing execution system (MES) posting 1.4M+ enterprise resource planning (ERP) transaction lines a year with zero manual entry.',
+            'I built the software that runs a dairy plant — operations apps used by 95% of staff and a manufacturing execution system (MES) that posted 1.4M+ enterprise resource planning (ERP) transaction lines in seven months with zero manual entry.',
         },
         { property: 'og:url', content: 'https://brycechesley.com/' },
         { property: 'og:image', content: 'https://brycechesley.com/og.png' },
@@ -81,7 +81,6 @@ export default defineNuxtConfig({
               'https://www.linkedin.com/in/bryce-chesley-43546915b',
               'https://fobech.com',
             ],
-            worksFor: { '@type': 'Organization', name: 'Suntado · Ida Milk' },
             affiliation: { '@type': 'Organization', name: 'Fobech LLC', url: 'https://fobech.com' },
             alumniOf: [
               { '@type': 'CollegeOrUniversity', name: 'Brigham Young University–Idaho' },
@@ -90,9 +89,12 @@ export default defineNuxtConfig({
             knowsAbout: [
               'Vue 3',
               'Nuxt',
+              'TypeScript',
               'Node.js',
               'Express',
+              'Socket.IO',
               'SQL Server',
+              'GitHub Actions CI/CD',
               'NetSuite',
               'SuiteScript',
               'SuiteQL',
@@ -103,7 +105,7 @@ export default defineNuxtConfig({
               'Enterprise resource planning (ERP) integration',
             ],
             description:
-              'Full-stack software engineer building the operations platform and manufacturing execution system (MES) for a dairy manufacturing plant: applications used daily by ~95% of staff, and automation that posts over 90% of the company’s enterprise resource planning (ERP) transaction lines (1.4M+ lines in the first seven months of 2026) with zero manual entry.',
+              'Full-stack software engineer who built the operations platform and manufacturing execution system (MES) for a dairy manufacturing plant (SunTado · Ida Milk, 2025–2026): applications used daily by ~95% of staff, and automation that posted over 90% of the company’s enterprise resource planning (ERP) transaction lines (1.4M+ lines in the first seven months of 2026) with zero manual entry.',
           }),
         },
         {

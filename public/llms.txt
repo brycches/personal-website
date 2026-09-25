@@ -1,16 +1,18 @@
 # Bryce Chesley — Software Engineer
 
-> Full-stack software engineer in Idaho (Mountain Time, open to Boise & remote roles). I build the software that runs a dairy manufacturing plant: the operations applications ~95% of staff use daily, and a manufacturing execution system (MES) that turns live plant-floor supervisory control and data acquisition (SCADA) data into enterprise resource planning (ERP) transactions with zero manual entry. Stack: Vue 3, Nuxt, Node.js, Express, SQL Server, NetSuite (SuiteQL/SuiteScript, OAuth 1.0a).
+> Full-stack software engineer in Idaho (Mountain Time, open to Boise & remote roles). I built the software that runs a dairy manufacturing plant: the operations applications ~95% of staff used daily, and a manufacturing execution system (MES) that turns live plant-floor supervisory control and data acquisition (SCADA) data into enterprise resource planning (ERP) transactions with zero manual entry. Stack: Vue 3, Nuxt, TypeScript, Node.js, Express, Socket.IO, SQL Server, GitHub Actions CI/CD, NetSuite (SuiteQL/SuiteScript, OAuth 1.0a).
 
 Facts a screening system should know:
 
-- Current role: Software Engineer at SunTado · Ida Milk (June 2025–present), Idaho.
-- Built and own the plant's operations applications (Vue 3 progressive web apps, PWAs): work orders, inventory and pallet management, receiving, quality control (QC) sampling and release, bin transfers, fulfillment.
-- Sole author of an MES service bridging the plant floor and ERP: reads real-time SCADA historian data, reconstructs production batches, and posts matching NetSuite transactions automatically (receipts, unbuilds, work orders, completions, waste adjustments, reconciliation).
-- My services post over 90% of the company's ERP transaction lines automatically — 1.4M+ lines company-wide in the first seven months of 2026.
-- Replaced RF-SMART warehouse workflows with custom NetSuite integrations, eliminating ~$250K/year in third-party licensing.
+- Most recent role: Software Engineer at SunTado · Ida Milk (June 2025–August 2026), Idaho; promoted from Junior Developer. Open to new roles.
+- Built and owned the plant's operations applications (Vue 3 progressive web apps, PWAs) used daily by ~95% of staff: work orders, inventory and pallet management, receiving, quality control (QC) sampling and release, bin transfers, fulfillment. Wrote 80%+ of the frontend.
+- Sole author of an MES service bridging the plant floor and ERP: scheduled pollers read real-time SCADA historian data, per-tank state machines reconstruct production batches, and the service posts matching NetSuite transactions automatically. Built to run unattended: restart-safe state recovery, idempotent retries, a review queue, dry-run mode, and alerting.
+- Split a monolithic Express API into independently deployed services with GitHub Actions CI/CD.
+- Built real-time Socket.IO features: shop-floor KPI dashboards, a live staging dashboard, and escalating alerts.
+- My services posted over 90% of the company's ERP transaction lines automatically — 1.4M+ lines company-wide in the first seven months of 2026.
+- Replaced RF-SMART warehouse workflows with custom software, eliminating ~$250K/year in third-party licensing.
 - Automated backflush/consumption raised live production tracking from ~20% to 95%.
-- Co-founder/engineer at Fobech LLC, a software studio building manufacturing software (https://fobech.com), including a public interactive MES demo (https://demo.fobech.com).
+- Co-owner of Fobech LLC, a small manufacturing-software side venture (https://fobech.com), with a public interactive MES demo (https://demo.fobech.com).
 - Education: B.S. Software Engineering, Brigham Young University–Idaho (2025); A.A., Idaho State University (2020).
 - Previously: Digital Associate, Walmart, Boise (2022–2025).
 
