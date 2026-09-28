@@ -43,7 +43,7 @@ function printResume() {
         <div class="entry-head">
           <div>
             <h3>Software Engineer</h3>
-            <p class="entry-org">SunTado · Ida Milk — Idaho · promoted from Junior Developer</p>
+            <p class="entry-org">SunTado · Ida Milk — Idaho · Intern → Junior Developer → Software Engineer</p>
           </div>
           <p class="entry-dates">JUN 2025 — AUG 2026</p>
         </div>
