@@ -5,7 +5,7 @@ useHead({
     {
       name: 'description',
       content:
-        'Software engineering experience: SunTado / Ida Milk operations platform, manufacturing execution system (MES) and NetSuite integrations, and the education behind them.',
+        'Software engineering experience: Idaho Department of Labor, the SunTado / Ida Milk operations platform, manufacturing execution system (MES) and NetSuite integrations, and the education behind them.',
     },
   ],
 })
@@ -21,7 +21,7 @@ function printResume() {
   <main>
     <div class="print-only print-head">
       <h1>Bryce Chesley</h1>
-      <p>Software Engineer · Idaho (Mountain Time) · open to Boise &amp; remote</p>
+      <p>Software Engineer · Boise, Idaho (Mountain Time)</p>
       <p>brycches@gmail.com · brycechesley.com · github.com/brycches · linkedin.com/in/bryce-chesley-43546915b</p>
     </div>
 
@@ -39,6 +39,19 @@ function printResume() {
     </section>
 
     <section class="section">
+      <article class="entry reveal">
+        <div class="entry-head">
+          <div>
+            <h3>Software Engineer II</h3>
+            <p class="entry-org">Idaho Department of Labor — Boise, Idaho</p>
+          </div>
+          <p class="entry-dates">NOV 2026 — PRESENT</p>
+        </div>
+        <ul class="entry-points">
+          <li>Develop and maintain the department's software, working primarily in C#.</li>
+        </ul>
+      </article>
+
       <article class="entry reveal">
         <div class="entry-head">
           <div>
@@ -98,6 +111,20 @@ function printResume() {
         <ul class="entry-points">
           <li>Fulfilled online pickup and delivery orders in a fast-paced, metrics-driven environment while maintaining accuracy and service standards.</li>
           <li>Trusted subject-matter expert for department workflows; routinely assigned complex tasks based on reliability and operational knowledge.</li>
+        </ul>
+      </article>
+
+      <article class="entry reveal">
+        <div class="entry-head">
+          <div>
+            <h3>Teaching Assistant &amp; Private Tutor</h3>
+            <p class="entry-org">Brigham Young University–Idaho — Rexburg, Idaho</p>
+          </div>
+          <p class="entry-dates">SEP 2023 — DEC 2023</p>
+        </div>
+        <ul class="entry-points">
+          <li>Teaching assistant for Applied Programming, the 200-level Python course, helping about 100 students debug their code and understand core programming concepts.</li>
+          <li>Offered private one-on-one tutoring, explaining concepts in new ways for students who were stuck.</li>
         </ul>
       </article>
 

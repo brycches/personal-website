@@ -25,7 +25,7 @@ usePageFx(() => {
     <!-- ============ HERO ============ -->
     <section class="hero">
       <div class="hero-copy">
-        <p class="eyebrow hero-line">SOFTWARE ENGINEER · IDAHO · OPEN TO BOISE &amp; REMOTE</p>
+        <p class="eyebrow hero-line">SOFTWARE ENGINEER · BOISE, IDAHO</p>
         <h1 class="hero-name">
           <span class="hero-line">Bryce</span>
           <span class="hero-line">Chesley</span>

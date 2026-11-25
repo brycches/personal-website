@@ -33,7 +33,7 @@ usePageFx()
         <dl class="contact-rows reveal">
           <div class="contact-row">
             <dt>location</dt>
-            <dd>Idaho — Mountain Time · open to Boise &amp; remote</dd>
+            <dd>Boise, Idaho — Mountain Time</dd>
           </div>
           <div class="contact-row">
             <dt>best for</dt>
